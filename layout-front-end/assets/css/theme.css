@@ -1,0 +1,379 @@
+* {
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    font-size: 100%;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    a,
+    a:hover {
+        text-decoration: none;
+        color: inherit;
+    }
+    ul,
+    li {
+        list-style: none;
+    }
+    audio,
+    img,
+    iframe,
+    video {
+        display: inline-block;
+        height: auto;
+        width: 100%;
+    }
+}
+
+/*positions*/
+.center-container {
+    align-items: center;
+}
+/*Buttons*/
+.btn {
+    border-radius: 5px;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    transition:
+        background-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.btn-header {
+    background-color: #ffffff;
+    color: #7d391f;
+    margin-top: 10px;
+    &:hover {
+        background-color: #f2a950;
+        color: #ffffff;
+    }
+    &:active {
+        transform: scale(0.95);
+    }
+}
+/*grids flexbox*/
+.container {
+    margin: 0 auto;
+    @media (min-width: 768px) {
+        width: 90%;
+    }
+}
+
+.row {
+    display: flex;
+    flex-direction: column;
+    @media (min-width: 768px) {
+        flex-direction: row;
+    }
+}
+
+.col-12,
+.col-11,
+.col-10,
+.col-9,
+.col-8,
+.col-7,
+.col-6,
+.col-5,
+.col-4,
+.col-3,
+.col-2,
+.col-1 {
+    padding: 0 15px;
+}
+
+@media (min-width: 768px) {
+    .col-12 {
+        width: 100%;
+    }
+    .col-11 {
+        width: 91.66%;
+    }
+    .col-10 {
+        width: 83.33%;
+    }
+    .col-9 {
+        width: 75%;
+    }
+    .col-8 {
+        width: 66.66%;
+    }
+    .col-7 {
+        width: 58.33%;
+    }
+    .col-6 {
+        width: 50%;
+    }
+    .col-5 {
+        width: 41.66%;
+    }
+    .col-4 {
+        width: 33.33%;
+    }
+    .col-3 {
+        width: 25%;
+    }
+    .col-2 {
+        width: 16.66%;
+    }
+    .col-1 {
+        width: 8.33%;
+    }
+}
+
+/*top*/
+.top {
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 10px 0 10px;
+    position: absolute;
+    width: 100%;
+    .logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 50px;
+        width: 180px;
+        h1 {
+            color: #fff;
+            font-size: 24px;
+            line-height: 4px;
+        }
+    }
+    .container_menu {
+        .links {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            li {
+                a {
+                    color: #fff;
+                    font-size: 14px;
+                    padding: 10px 15px;
+                }
+            }
+        }
+    }
+}
+
+/*Sectiopns aqui*/
+.theme {
+    .banner,
+    .about-us,
+    .products,
+    .testimonials,
+    .contact {
+        .container {
+            padding: 4em 0;
+        }
+    }
+    .about-us h2,
+    .products h3,
+    .testimonials h2,
+    .contact h2 {
+        color: #735149;
+    }
+    .banner h2,
+    .about-us h2,
+    .testimonials h2,
+    .contact h2 {
+        font-size: 30px;
+    }
+    /*banner*/
+    .banner {
+        background: url(../imgs/banner.png) no-repeat center center/cover;
+        display: flex;
+        color: #fff;
+        .container {
+            padding: 7em 0;
+        }
+        @media (min-width: 768px) {
+            .container {
+                padding: 10em 0;
+            }
+        }
+    }
+
+    /*about-us*/
+    .about-us {
+        .container {
+            h2 {
+                font-size: 30px;
+                margin-bottom: 20px;
+            }
+            p {
+                font-size: 16px;
+                line-height: 1.5;
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    /*products*/
+    .products {
+        background-image: url(../imgs/banner-products.png);
+        .container {
+            h2 {
+                font-size: 30px;
+                margin-bottom: 20px;
+            }
+            .row {
+                margin-top: 20px;
+                .col-4 {
+                    .container-product {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: space-between;
+                        height: 100px;
+                        img {
+                            width: 40%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    /*testimonials*/
+    .testimonials {
+        background-image: url(../imgs/borda.png);
+        background-position-y: 400px;
+        background-repeat: no-repeat;
+        background-size: 30%;
+        .container {
+            h2 {
+                font-size: 30px;
+            }
+            .row {
+                .col-4 {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-top: 80px;
+                    .container-testimonial {
+                        background-color: #fff;
+                        border-radius: 10px;
+                        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        min-height: 200px;
+                        padding: 40px 20px 20px 20px;
+                        position: relative;
+                        text-align: center;
+                        img {
+                            margin-bottom: 20px;
+                            position: absolute;
+                            top: -50px;
+                            width: 30%;
+                        }
+                        p {
+                            font-size: 16px;
+                            line-height: 1.5;
+                            margin-bottom: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .contact {
+        background-color: transparent;
+        .container {
+            .form-contact {
+                background-color: #fff;
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+                gap: 5px;
+                padding: 40px 20px 20px 20px;
+                position: relative;
+                width: 100%;
+                button{
+                    background-color: #F2A950;
+                    border: none;
+                    border-radius: 5px;
+                    color: #574741;
+                    cursor: pointer;
+                    font-size: 16px;
+                    font-weight: bold;
+                    padding: 10px 20px;
+                    text-align: center;
+                    text-decoration: none;
+                    transition:
+                        background-color 0.3s ease,
+                        transform 0.3s ease;
+                }
+                input{
+                    border: none;
+                    border-bottom: 1px solid #735149;
+                    font-size: 16px;
+                    margin-bottom: 20px;
+                    padding: 10px;
+                    width: 49%;
+                }
+                textarea {
+                    border: 1px solid #735149;
+                    border-radius: 5px;
+                    font-size: 16px;
+                    margin-bottom: 20px;
+                    padding: 10px;
+                    width: 100%;
+                }
+            }
+        }
+    }
+    footer{
+        background-color: #fff;
+        padding: 20px 0;
+        position: relative;
+        text-align: center;
+        width: 100%;
+        &::after {
+            content: "";
+            background-image: url(../imgs/borda.png);
+            background-position-y: -100px;
+            background-repeat: no-repeat;
+            background-size: 100%;
+            bottom: -15px;
+            height: 180px;
+            left: -10px;
+            position: absolute;
+            width: 400px;
+        }
+        &::before {
+            content: "";
+            background-image: url(../imgs/borda.png);
+            background-position-y: -100px;
+            background-repeat: no-repeat;
+            background-size: 100%;
+            bottom: -25px;
+            height: 180px;
+            right: 0;
+            position: absolute;
+            transform: rotate(180deg);
+            width: 400px;
+        }
+        .container {
+            p {
+                color: #735149;
+                font-size: 14px;
+                margin-bottom: 10px;
+            }
+            a {
+                color: #F2A950;
+                font-size: 14px;
+                margin-left: 5px;
+            }
+        }
+    }
+}
