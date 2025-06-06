@@ -1,0 +1,11 @@
+/*top*/
+.top{
+    img{
+        width: 12%;
+    }
+    @media(max-width: 789px){
+        img{
+            width: 44%;
+        }
+    }
+}
