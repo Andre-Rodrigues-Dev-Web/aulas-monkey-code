@@ -1,0 +1,23 @@
+//mixins 
+@mixin buttoncode($color, $border-radius) {
+    background-color: $color;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: $border-radius;
+    cursor: pointer;
+
+    &:hover {
+        background-color: darken($color, 10%);
+    }
+}
+
+.btn-primary {
+    @include buttoncode(#007bff, 5px);
+}
+//loop for
+@for $i from 1 through 5 {
+    .font-#{$i} {
+        font-size: $i * 0.5rem;
+    }
+}
